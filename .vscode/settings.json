@@ -1,0 +1,80 @@
+{
+    "git.ignoreLimitWarning": true,
+    "jest.jestCommandLine": "npm run test --",
+    "jest.autoRun": {
+        "watch": false,
+        "onSave": "test-src-file",
+        "onStartup": false
+    },
+    "jest.testExplorer": {
+        "enabled": true,
+        "showInlineError": true,
+    },
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "editor.autoIndent": "full",
+    "editor.insertSpaces": true,
+    "editor.rulers": [
+        120,
+        200
+    ],
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+    ],
+    "i18n-ally.localesPaths": [
+        "src/common/i18n",
+    ],
+    "i18n-ally.displayLanguage": "de",
+    "i18n-ally.sourceLanguage": "en",
+    "i18n-ally.extract.autoDetect": true,
+    "i18n-ally.keystyle": "nested",
+    "i18n-ally.enabledFrameworks": [
+        "chrome-ext",
+        "custom"
+    ],
+    "github-enterprise.uri": "https://git.daimler.com/IT-O/PLUS",
+    "atlascode.jira.lastCreateSiteAndProject": {
+        "siteId": "productioncontrol.app.corpintra.net",
+        "projectKey": "ADM"
+    },
+    "atlascode.jira.jqlList": [
+        {
+            "enabled": true,
+            "id": "d52e7afc-741f-4a61-9853-bd07efce9811",
+            "monitor": true,
+            "name": "Active Sprint",
+            "query": "project = XXX AND Sprint in openSprints() AND component = FE AND issuetype not in (Epic, Retro) AND status NOT in (50-Reviewed, 60-Closed) ORDER BY Rank",
+            "siteId": "productioncontrol.app.corpintra.net"
+        },
+        {
+            "enabled": true,
+            "id": "6e9e4594-a589-4eca-bade-bf811f86084d",
+            "monitor": true,
+            "name": "In Progress/Tested",
+            "query": "project = XXX AND Sprint in openSprints() AND issuetype not in (Epic, Retro) AND status in (\"30-In Progress\", 40-Tested) AND assignee=currentUser() ORDER BY Rank",
+            "siteId": "productioncontrol.app.corpintra.net"
+        },
+        {
+            "enabled": true,
+            "id": "0d8713ac-a2cf-4395-966a-03913d159410",
+            "monitor": true,
+            "name": "Assigned to me",
+            "query": "project = XXX AND Sprint in openSprints() AND issuetype not in (Epic, Retro) AND status in (10-Created, 15-Open,20-Ready, 35-Blocked, 40-Tested) AND assignee=currentUser() ORDER BY Rank",
+            "siteId": "productioncontrol.app.corpintra.net"
+        }
+    ],
+    "atlascode.jira.explorer.enabled": true,
+    "atlascode.jira.statusbar.showLogin": true,
+    "atlascode.jira.statusbar.showUser": true,
+    "atlascode.jira.statusbar.showProduct": true,
+    "atlascode.jira.explorer.refreshInterval": 5,
+    "atlascode.jira.explorer.nestSubtasks": false,
+    "atlascode.jira.startWorkBranchTemplate.customPrefixes": [],
+    "atlascode.jira.startWorkBranchTemplate.customTemplate": "feature/XXX/FE/{{{issueKey}}}-{{{summary}}}",
+    "atlascode.bitbucket.enabled": false,
+}

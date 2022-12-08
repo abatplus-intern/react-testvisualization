@@ -1,0 +1,15 @@
+{
+    "app_title": {
+        "message": "Hello World"
+    },
+    "loading": {
+        "message": "Loading ..."
+    },
+    "error_message_generic": {
+        "message": "An error occurred. Please report it.",
+        "description": "A descrption for the message giving further hints/help for a translator or other developers"
+    },
+    "error_message": {
+        "message": "Error:"
+    }
+}

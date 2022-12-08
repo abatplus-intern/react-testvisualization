@@ -1,0 +1,18 @@
+# node
+node_modules
+
+# build
+dist
+
+# tests
+coverage
+
+# public 
+env.js
+
+# webpack bundle analyzer
+webpack_stats.json
+
+# cypress
+cypress/screenshots
+cypress/videos

@@ -1,0 +1,60 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "lib": [
+          "dom",
+          "esnext"
+        ],
+        "types": [
+          "cypress",
+          "jest",
+          "node"
+        ],
+        "strictNullChecks": true,
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "jsx": "react-jsx",
+        "outDir": "./dist",
+        "sourceMap": true,
+        "removeComments": true,
+        "pretty": true,
+        "forceConsistentCasingInFileNames": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": false,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noImplicitAny": true,
+        //needed for mui color index access
+        "suppressImplicitAnyIndexErrors": true,
+        "importHelpers": true,
+        "experimentalDecorators": false,
+        "emitDecoratorMetadata": false,
+        // Babel
+        // Ensure that .d.ts files are created by tsc, but not .js files
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        // Ensure that Babel can safely transpile files in the TypeScript project
+        "isolatedModules": true
+    },
+    "include": [
+        "api/**/*",
+        "src/**/*",
+        "cypress/integration/**/*.test.*",
+        "test",
+        "custom.d.ts"
+    ],
+    "exclude": [
+        "src/**/*.test.*"
+    ],
+    "ts-node": { // these options are overrides used only by ts-node// same as our --compilerOptions flag and our TS_NODE_COMPILER_OPTIONS environment variable
+        "compilerOptions": {
+            "module": "commonjs"
+        }
+    },
+}

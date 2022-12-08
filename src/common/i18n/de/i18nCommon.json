@@ -1,0 +1,18 @@
+{
+  "app_title": {
+    "message": "Hallo Welt XXX"
+  },
+  "loading": {
+    "message": "Lade ..."
+  },
+  "error_message_generic": {
+    "message": "Es ist ein Fehler ist aufgetreten. Bitte melden Sie den Fehler.",
+    "description": "Eine Beschreibung zur Message, die dem Übersetzer oder anderen Entwicklern helfen/Hinweise geben kann."
+  },
+  "error_message": {
+    "message": "Fehler:"
+  },
+  "app_titleNew": {
+    "message": "hallo new"
+  }
+}

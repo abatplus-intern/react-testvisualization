@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens",
+        "orta.vscode-jest",
+        "editorconfig.editorconfig",
+        "usernamehw.errorlens",
+        "dbaeumer.vscode-eslint",
+        "lokalise.i18n-ally",
+        "atlassian.atlascode",
+        "oouo-diogo-perdigao.docthis",
+        "github.vscode-pull-request-github",
+        "actboy168.tasks"
+    ]
+}
