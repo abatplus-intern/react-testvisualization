@@ -8,13 +8,11 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from 'tss-react/mui';
 
-
 const useStyles = makeStyles()((theme: Theme) => ({
     colorWhite: {
         color: theme.palette.common.white,
     },
 }));
-
 
 export function MBAppBar() {
     const { classes } = useStyles();
