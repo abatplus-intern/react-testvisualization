@@ -1,4 +1,4 @@
-import { makeStyles } from "tss-react/mui";
+import { makeStyles } from 'tss-react/mui';
 import { ClassNameMap, CombinedClassKey, SnackbarProvider } from 'notistack';
 import { ReactNode } from 'react';
 
