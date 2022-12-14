@@ -1,4 +1,5 @@
 import MainRoute from './MainRoute';
+import TestquadrantRoute from './TestquadrantRoute';
 import { nameof } from '@plusng/react-common-components';
 import I18nTexts from '../common/i18n/I18nTextsCommon';
 import { Routes } from './routes';
@@ -36,6 +37,12 @@ const routes: RouteConfigEx[] = [
         getComponent: () => <MainRoute />,
         name: Routes.home,
         path: '/',
+        displayName: nameof<I18nTexts>('app_title'),
+    },
+    {
+        getComponent: () => <TestquadrantRoute />,
+        name: Routes.testquadrant,
+        path: '/testquadrant',
         displayName: nameof<I18nTexts>('app_title'),
     },
 ];
