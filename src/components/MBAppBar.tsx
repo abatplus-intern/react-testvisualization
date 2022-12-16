@@ -7,6 +7,7 @@ import { Grid } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from 'tss-react/mui';
+import NewRelease from './newRelease/NewRelease';
 
 const useStyles = makeStyles()((theme: Theme) => ({
     colorWhite: {
@@ -27,20 +28,23 @@ export function MBAppBar() {
                     </Grid>
                     <Grid item>
                         <Typography variant="h6" noWrap component="div">
-                            React Template
+                            Testvisualisierung
                         </Typography>
                     </Grid>
                 </Grid>
             }
             rightContent={
-                <Grid container alignItems="center" justifyContent="flex-end">
+                <Grid container alignItems="center" spacing={1} justifyContent="flex-end">
                     <Grid item>
-                        <IconButton size="large" edge="start" aria-label="menu" className={classes.colorWhite}>
+                        <NewRelease></NewRelease>
+                    </Grid>
+                    <Grid item>
+                        <IconButton size="small" edge="end" aria-label="menu" className={classes.colorWhite}>
                             <SettingsIcon />
                         </IconButton>
                     </Grid>
                     <Grid item>
-                        <IconButton size="large" edge="start" aria-label="menu" className={classes.colorWhite}>
+                        <IconButton size="small" edge="end" aria-label="menu" className={classes.colorWhite}>
                             <PersonIcon />
                         </IconButton>
                     </Grid>
