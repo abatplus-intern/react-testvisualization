@@ -1,8 +1,9 @@
 import MainRoute from './MainRoute';
-import TestquadrantRoute from './TestquadrantRoute';
 import { nameof } from '@plusng/react-common-components';
 import I18nTexts from '../common/i18n/I18nTextsCommon';
 import { Routes } from './routes';
+import Main from '../components/Main';
+import Testquadrant from '../components/Testquadrant';
 
 export interface RouteConfigEx {
     /**
@@ -34,15 +35,23 @@ export interface RouteConfigEx {
 
 const routes: RouteConfigEx[] = [
     {
-        getComponent: () => <MainRoute />,
-        name: Routes.home,
-        path: '/',
+        getComponent: () => (
+            <MainRoute>
+                <Testquadrant />
+            </MainRoute>
+        ),
+        name: Routes.testquadrant,
+        path: '/testquadrant',
         displayName: nameof<I18nTexts>('app_title'),
     },
     {
-        getComponent: () => <TestquadrantRoute />,
-        name: Routes.testquadrant,
-        path: '/testquadrant',
+        getComponent: () => (
+            <MainRoute>
+                <Main />
+            </MainRoute>
+        ),
+        name: Routes.home,
+        path: '/',
         displayName: nameof<I18nTexts>('app_title'),
     },
 ];

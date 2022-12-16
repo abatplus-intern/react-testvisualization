@@ -1,13 +1,11 @@
-import React, { Suspense } from 'react';
-import Main from '../components/Main';
+import React, { ReactNode, Suspense } from 'react';
 import { Typography } from '@mui/material';
 
-function MainRoute() {
-    return (
-        <Suspense fallback={<Typography>Loading main content...</Typography>}>
-            <Main />
-        </Suspense>
-    );
+interface RouteProps {
+    children: ReactNode;
+}
+function MainRoute(props: RouteProps) {
+    return <Suspense fallback={<Typography>Loading content...</Typography>}>{props.children}</Suspense>;
 }
 
 export default React.memo(MainRoute);

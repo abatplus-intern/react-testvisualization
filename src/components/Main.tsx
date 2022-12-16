@@ -1,12 +1,15 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import { makeStyles } from 'tss-react/mui';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useTranslation } from '../common/i18n/useTranslation';
 import config from '../configuration/configuration';
 import ChuckNorrisJoke from './ChuckNorrisJoke';
 import { Theme } from '@mui/material/styles';
 import { queryPromiseCache } from '../common/rest/useQuery';
+
+import { getRoutePath, Routes } from '../routes/routes';
 
 // for styling and theming information refer to: https://pages.git.daimler.com/DaimlerUI/material-ui/v5/#/daimlerUI-general
 // an theme explorer of the MB theme con be found at: https://pages.git.daimler.com/DaimlerUI/material-ui/v5/#/theme-override
@@ -22,6 +25,7 @@ const useStyles = makeStyles()((theme: Theme) => ({
  * Main component.
  */
 function Main() {
+    const navigate = useNavigate();
     const translate = useTranslation();
     const { classes } = useStyles();
     const [counter, setCounter] = useState<number>(0);
@@ -32,8 +36,8 @@ function Main() {
             <Typography variant="h1">{translate('app_title')}</Typography>
             <Grid container direction="row" justifyContent="flex-start" alignItems="center" spacing={4}>
                 <Grid item>
-                    <Button variant="outlined" onClick={() => setCounter(counter + 1)}>
-                        Click {counter}
+                    <Button variant="outlined" onClick={() => navigate(getRoutePath(Routes.testquadrant))}>
+                        Weiterleiten
                     </Button>
                 </Grid>
 
